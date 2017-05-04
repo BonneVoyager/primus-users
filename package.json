@@ -1,0 +1,42 @@
+{
+  "name": "primus-users",
+  "version": "0.1.0",
+  "description": "Adds users to Primus",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bonnevoyager/primus-users"
+  },
+  "keywords": [
+    "primus",
+    "omega",
+    "supreme",
+    "metroplex",
+    "scaling",
+    "websocket",
+    "users"
+  ],
+  "author": "Krzysztof Gutkowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bonnevoyager/primus-users/issues"
+  },
+  "homepage": "https://github.com/bonnevoyager/primus-users",
+  "dependencies": {
+    "async": "~2.2.0",
+    "fusing": "~1.0.0",
+    "eventemitter3": "~1.2.0"
+  },
+  "devDependencies": {
+    "assume": "~1.4.1",
+    "binary-pack": "~1.0.2",
+    "istanbul": "~0.4.5",
+    "mocha": "~3.2.0",
+    "pre-commit": "~1.2.0",
+    "primus": "~6.1.0",
+    "ws": "~2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
