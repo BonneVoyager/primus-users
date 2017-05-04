@@ -107,6 +107,8 @@ module.exports = function forwards(primus) {
 
     metroplex.redis.smembers(metroplex.namespace + 'user:' + uid, function getUserSparks(err, sparks) {
       if (err) return fn(err);
+	  
+	  if (!sparks.length) return fn(null, { ok: true, send: 0 });
 
       metroplex.sparks(sparks, function getSparksServers(err, servers) {
         if (err) return fn(err);
@@ -143,6 +145,8 @@ module.exports = function forwards(primus) {
       if (err) return fn(err);
 
       flattenedSparks = flattenRedisMulti(redisMulti);
+	  
+	  if (!flattenedSparks.length) return fn(null, { ok: true, send: 0 });
 
       metroplex.sparks(flattenedSparks, function getSparksServers(err, servers) {
         if (err) return fn(err);
